@@ -1,0 +1,290 @@
+/* ADDOINDIA - Luxury Responsive & Mobile Breakpoints */
+
+/* Mobile Nav Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 82%;
+  max-width: 360px;
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: 10px 0 30px rgba(0,0,0,0.15);
+  z-index: 220;
+  transform: translateX(-100%);
+  transition: transform var(--trans-luxury);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-drawer.open {
+  transform: translateX(0);
+}
+
+.mobile-nav-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-nav-list a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.mobile-nav-list a:hover {
+  color: var(--gold-primary);
+}
+
+.mobile-nav-footer {
+  padding: 20px 24px;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+/* Breakpoints */
+
+/* Large Tablets & Small Laptops (<= 1200px) */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 3.4rem;
+  }
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trends-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+  .tote-examples-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .main-nav {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-carousel-section,
+  .hero-carousel-track,
+  .hero-slide-container {
+    min-height: 620px;
+  }
+  .hero-front-card {
+    max-width: 520px;
+    padding: 32px 28px;
+  }
+  .hero-slide-pill {
+    display: none;
+  }
+  .spotlight-row,
+  .spotlight-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    direction: ltr;
+  }
+  .spotlight-media {
+    height: 400px;
+  }
+  .style-switch-display {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .story-images {
+    text-align: center;
+  }
+  .story-main-img {
+    margin: 0 auto;
+  }
+  .story-badge-quote {
+    right: 10px;
+    bottom: -10px;
+  }
+  .journal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .seo-accordion-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .footer-brand-col {
+    grid-column: span 2;
+  }
+  .quickview-grid {
+    grid-template-columns: 1fr;
+  }
+  .quickview-details {
+    padding: 24px;
+  }
+  .occasion-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile Devices (<= 640px) */
+@media (max-width: 640px) {
+  :root {
+    --header-height: 70px;
+    --announcement-height: 36px;
+  }
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .announcement-bar {
+    font-size: 0.72rem;
+  }
+  .brand-logo {
+    font-size: 1.6rem;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .hero-carousel-section,
+  .hero-carousel-track,
+  .hero-slide-container {
+    min-height: 560px;
+  }
+  .hero-slide-overlay {
+    background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.88) 65%, rgba(255,255,255,0.3) 100%);
+  }
+  .hero-front-card {
+    padding: 24px 18px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-cta-group {
+    justify-content: center;
+  }
+  .hero-trust-row {
+    justify-content: center;
+    gap: 12px;
+  }
+  .hero-carousel-arrow {
+    width: 38px;
+    height: 38px;
+  }
+  .hero-carousel-arrow.prev {
+    left: 8px;
+  }
+  .hero-carousel-arrow.next {
+    right: 8px;
+  }
+  .section-title {
+    font-size: 2.1rem;
+  }
+  .spotlight-title {
+    font-size: 2.1rem;
+  }
+  .final-cta-title {
+    font-size: 2.4rem;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .product-card-body {
+    padding: 12px;
+  }
+  .product-name {
+    font-size: 1.05rem;
+  }
+  .product-card-buttons {
+    grid-template-columns: 1fr;
+  }
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .trends-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-addo-section .pillars-why-grid {
+    grid-template-columns: 1fr;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .journal-grid {
+    grid-template-columns: 1fr;
+  }
+  .occasion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tote-examples-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-brand-col {
+    grid-column: span 1;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .drawer-panel {
+    max-width: 100%;
+  }
+  .style-visual-duo {
+    grid-template-columns: 1fr;
+  }
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .newsletter-btn {
+    width: 100%;
+  }
+  .hero-floating-card {
+    display: none;
+  }
+}
